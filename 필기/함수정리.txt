@@ -1,0 +1,28 @@
+함수정리
+1.함수생성
+2.함수호출(함수이름();)
+1. 리턴타입X 매개변수 X
+public void add() {
+   System.out.println(3+5);
+}
+
+2.리턴타입X 매개변수 O
+public void add(int X, int Y) {
+   System.out.println(x+y);
+}
+add(3+5);
+
+3.리턴타입O 매개변수 X
+public void add() {
+  return 3+5;
+}
+add();
+ System.out.println(result);
+
+
+4.리턴타입O 매개변수 O
+public void add(int X, int Y) {
+  return(X+Y);
+}
+System.out.println(add(3,5));
+

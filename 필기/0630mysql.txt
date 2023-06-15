@@ -1,0 +1,79 @@
+<<mysql
+1.접속방법: mysql -u아이디 -p비밀번호 사용할 데이터베이스
+--------------------------------------------------------------------
+2.각각의 데이터베이스와 계정생성
+: 남이 나의 DB에 접근을 하지 못하도록
+
+1) 사용할 데이터베이스 생성  (creatd database 데이터베이스 이름;)
+2) 계정 생성 (create user 'user이름'@'localhost' identified by '비밀번호';)
+3) 계정과 데이터베이스 연결
+(grant all privileges on testdb.* to 'test'@'localhost';)
+4) 재시작: flush privileges
+---------------------------------------------------------------
+mysql -uroot -p111111 mysql
+---------------------------------------------------------------
+*데이터베이스 : CRUD 기능사용
+  -create: 생성, 만들다 (insert query)
+  -read: 읽어오다(select query)
+  -update: 수정하다(update query)
+  -delete: 삭제하다(delete query)
+----------------------------------------------------------------
+emp table, dept table
+1. 테이블 생성: create table 테이블이름(
+		필드이름, 타입
+		필드이름, 타입
+		필드이름, 타입....
+		primary key(필드)); 기본키(주민번호 전화번호 등)
+create table emp(
+	empno int(4),   
+	ename varchar(20),
+	job varchar(30),
+	mgr int(4),
+	hiredate date,
+	sal int(10),
+	commn int(10),
+	deptno int(2),
+	primary key(empno)
+		);
+
+사원번호,사원이름,담당, 매니저, 입사날짜, 급여,  보너스, 부서번호 
+--------------------------------------------------------------------------------
+<<query 명령어
+1. create
+2. desc 테이블명 : 테이블구조 
+3. insert into 테이블명(필드명, 필드명....) values(값, 값, 값, 값....);
+
+사원번호,사원이름,담당, 매니저, 입사날짜, 급여,  보너스, 부서번호
+7396,        smith, clerk,  7902, 2010-03-02,800,   null,       20
+insert into emp values(7396,'smith','clerk',7902,'2010-03-02',800,null,20);
+		   (문자는 따옴표)
+
+
+INSERT INTO EMP VALUES(7499,'ALLEN','SALESMAN',7698,'2010-03-02',1600,300,30);
+INSERT INTO EMP VALUES(7521,'WARD','SALESMAN',7698,'2013-05-02',1250,500,30);
+INSERT INTO EMP VALUES(7566,'JONES','MANAGER',7839,'2016-11-02',2975,NULL,20);
+INSERT INTO EMP VALUES(7654,'MARTIN','SALESMAN',7698,'2020-03-02',1250,1400,30);
+INSERT INTO EMP VALUES(7698,'BLAKE','MANAGER',7839,'2005-10-01',2850,NULL,30);
+INSERT INTO EMP VALUES(7782,'CLARK','MANAGER',7839,'2019-07-11',2450,NULL,10);
+INSERT INTO EMP VALUES(7788,'SCOTT','ANALYST',7566,'2012-05-03',3000,NULL,20);
+INSERT INTO EMP VALUES(7839,'KING','PRESIDENT',NULL,'2013-08-02',500,NULL,10);
+INSERT INTO EMP VALUES(7844,'TURNER','SALESMAN','2014-02-03',1500,0,30);
+INSERT INTO EMP VALUES(7876,'ADAMS','CLERK',7788,'2017-03-06',1100,NULL,20);
+INSERT INTO EMP VALUES(7900,'JAMES','CLERK',7698,'2012-07-03',950,NULL,30);
+INSERT INTO EMP VALUES(7902,'FORD','ANALYST',7566,'2014-01-03',3000,NULL,20);
+INSERT INTO EMP VALUES(7934,'MILLER','CLERK',7782,'2013-02-03',1300,NULL,10);
+
+4. select : 테이블에서 값을 추출하는 것
+1) selct * from emp;
+2) 사원이름, 입사일을 조회
+    select ename, hiredate from emp;
+
+*show tables: 데이터베이스내의 테이블 목록 보기 
+3)
+		
+
+
+
+
+
+

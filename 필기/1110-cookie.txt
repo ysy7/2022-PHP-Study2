@@ -1,0 +1,8 @@
+<<cookie
+1. 쿠키 만드는 방법: setcookie()
+2. 쿠키 들어있는 변수 $_COOKIES[]
+
+<<session
+1. session 만드는 방법: $_SESSION[세션변수];
+2. session_start()로 시작 
+

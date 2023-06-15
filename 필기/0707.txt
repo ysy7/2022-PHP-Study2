@@ -1,0 +1,23 @@
+<<mysql 명령어
+1. show tables: 데이터베이스안에 있는 테이블 조회
+2. crud: create(insert) / read(select) / update*update) / delet (delete)
+3. insert into 테이블이름 (필드명, 필드명...) values(값, 값, ..);
+   inser into 테이블이름 values(값, 값,.);
+
+4. 테이블 생성
+  테이블 이름: dept
+deptno int
+dname varchar(20)
+loc varchar(50)
+pk를 deptno로
+
+create table dept(
+deptno int(10),
+dname varchar(20),
+loc varchar(50),
+primary key(deptno));
+
+primary key(기본키); 중복되지 않는 유일한 키, 주민등록 번호, 아이디 , 핸드폰번호
+
+INSERT INTO EMP VALUES(7839,'KING','PRESIDENT',NULL,'2013-08-02',500,NULL,10);
+

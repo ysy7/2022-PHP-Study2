@@ -1,0 +1,32 @@
+<<bootstrap
+1.트위터에서 개발한 가장 인기있는 jquery 기반 오픈소스 프론트엔트 라이브러리
+2.반응형 웹으로 이루어짐
+
+*jquery: 자바스크립트 라이브러리
+
+3. 사용방법
+1) 파일들을 모두 다운받아서 사용
+2)CDN 으로 링크걸어서 사용
+
+4. bootstrap 무료 템플릿
+https://bootstrapthemes.co/items/free-bottstrap-templates/
+
+https://html5up.net/
+
+5. grid 레이아웃
+1) 화면을 12개의 컬럼으로 분활하여 사용(em,rem사용)
+2) 기기옵션
+
+구분
+---------------------------------------------------------------------------
+ <div class="row">
+        <div class="col bg-info">
+            Column1
+        </div>
+        <div class="col bg-warning">
+            Column2
+        </div>
+        <div class="col bg-success">
+            Column3
+    </div>
+</div>

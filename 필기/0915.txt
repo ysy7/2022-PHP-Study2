@@ -1,0 +1,21 @@
+CRUD insert update delete 와 select의 차이점
+insert... 는 리턴값이 없지만
+select는 리턴값(결과값) 이 존재한다. 
+
+1.select 한 결과를 $result에 저장
+=>$result는 2차원 배열로 저장
+
+2. $result에 들어있는 것을 한 줄 씩 가지고 오기
+  1) mysqli_fetch_row($result) // $a[0]  $a[1] $a[2]...
+  2) mysqli_fetch_array($result)  //$a['idx']  $a['title'] $a['writer'] <- 필드 이름으로
+   ==> 1차원 배열이 됨
+------------------------------------------------------------------------------------------
+php코드안에서 html 사용법
+echo "<html><head><title>";
+
+html코드안에서 php사용
+<a href="a.php?<?php echo $aaaa?>">
+--------------------------------------------------------------------------------------------
+내림차순, 오름차순
+select * from bbs order by id ;  오름차순
+select * from bbs order by id desc; 내림차순

@@ -1,0 +1,236 @@
+[0303]
+<<web
+1.클라이언트(client) : 브라우저, 정보를 요청
+ *브라우저 종류 : 크롬,익스,웨일,오페라,파이어폭스
+ *클라이언트언어(프론트앤드) : html css javascript, rect, vue
+
+2.서버(server) : 정보를 제공
+ *서버사이드언어(백앤드) : php jsp spring node django
+ *서버사이드언어 : 서버측에서 작동(서버가 있어야 실행이 된다)
+
+3.시멘틱 태그
+: 의미를 알 수 있게 저장한 태그
+<html>
+  <head>
+   <title>
+      <body>
+         <header>
+         <nav>
+         
+
+CSS(Cascading Style Sheet)->디자인
+1.삽입방법
+1)<style>______</style>
+2)외부파일로 만들어서 링크거는 것<link rel ="stylesheet" href="#">
+3)태그에 직접삽입 <p style = "            ">
+
+2.형식 : selector (속성 : 값; 속성 : 값; 속성 : 값;)
+           1)selector : 태그, 클래스, 아이디
+           2)h1태그에 배경색을 dodgerblue로 설정
+
+h1    { background : dodgerblue}
+selector             속성             값
+(태그)
+
+* <meta> : 문서에 대한 정보를 알려주는 태그
+file:///C:/Users/User/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%EC%88%98%EC%97%85/PHP/test1.html(클라이언트에서 동작되는 것
+http://127.0.0.1:5500/test1.html/ 서버에서 동작되는 것)
+*가상서버 : http://locallhost
+     http://127.0.0.1
+
+[0307]
+<<(반응형) 웹에서 사용하는 폰트 
+1.px
+: 데스크탑이나 모바일. 노트북에서 동일한 폰트크기 사용
+2.em
+:부모크기의 배수로 적용
+3.rem
+:브라우저의 기본크기의 배수로 적용(기본크기 : 16px)
+ex) 3rem=48px
+4.vw
+:브라우저의 가로너비에 영향(1vw=기본 화면 가로 넓이의 1/100)
+ex) 데스크탑 가로넓이 1000 -> 2vw=20px
+     font-size:3vw <-------30px이 된다 
+5.vh
+
+[0317]
+<<box모델
+1. block모델: 배치가 아래로
+: div,p,h1_h6......
+
+2.inline모델: 배치가 옆으로
+:a,span....
+
+3.inline-bloch모델: inline과 bloch의 속성을 모두 가짐 
+
+4.block-> inline변경: display:inline, display:inline-block
+*inline: width,height, padding-top 줄 수 없음
+	
+5.inline ->block변경: display:block
+--------------------------------------------------------------
+
+<<selector
+1.자식선택자(>):부모아래 있는 첫번째 자식에 적용
+	section>p{clolr:blue;} 
+ 섹션태그 아래 첫번째 p태그에 색을 blue로 지정
+
+2.자손선택자(빈칸): 부모아래 있는 모든 자손들에 적용
+	section    p{background:blue}
+
+3.형제선택자: 같은 부모를 가진 형제들 사이에 적용 
+	h1)div+h1: div 태그의 형제중 첫번쨰 h1에만 적용
+	h2)div~h1: div 태그의 형제중 모든 h1에만 적용
+4.속성선택자: ㅈㅣ정한 속성을 가진 태그에 적용
+a[href] {color:red:}
+
+[0324]
+viewport : 노트북과 핸드폰에서 보는 구조가 기기에 맞춰지도록 열어라 하는 옵션 : 반응형 웹
+
+
+!!test11!!
+1.
+    div>h2 {
+        color:red;
+    }
+를 주었을 때 : div의 바로 아래에 있는 h2(12, 13, 17, 18)의 글씨에 짤간색이 적용된다.
+
+2. 
+    div h2 {
+        color:blue;
+    }
+를 주었을 때 : div의 아래에 있는 모든 h2에게 파란색이 적용된다.
+
+3.
+    div h1+h2 {
+        color:green;
+    }
+를 주었을 때 : div의 아래에 있는 h1의 가장 가까운 h2에만 초록색이 적용된다.
+
+4. 
+    div h1~h2 {
+        color:orange;
+    }
+를 주었을 때 : div의 아래에 있는 h1의 형제중 모든 h2에 주황색이 적용된다.
+--------------------------------------------------------------------------
+가상클래스와 가상요소
+1. 동작에 반응하는 클래스
+    1) a:link {} : 하이퍼링크 걸렸을 때
+    2) a:visited {} : 클릭한 후
+    3) a:hover {} : 마우스 올렸을 때
+    4) a:active {} : 마우스 클릭했을 때
+
+*focus : 초점이 맞추어졌을 때 스타일 적용
+
+2. input에서 사용
+    1) :enabled : 
+    2) :disabled :
+    3) :chacked : radio, checkbox에 스타일 적용
+---------------------------------------------------------------------------
+1. :nth-child(n) : 앞에서부터 n번째 자식요소에 스타일 적용
+2. :nth-last-child(n) : 뒤애서부터 n번째 자식요소에 스타일 적용
+3. :first-child : 첫번째 자식에 적용
+4. :last-child : 마지막 자식에 적용
+
+ex) div p:nth-child(3) : div 아래의 p의 3번째 행에 스타일 적용
+    div p:nth-child(odd), p:nth-child(2n+1) : 홀수번째 행에 스타일 적용
+    div p:nth-child(even), p:nth-child(2n) : 짝수번째 행에 스타일 적용
+
+[0407]
+<<(반응형) 웹에서 사용하는 폰트 
+1.px
+: 데스크탑이나 모바일. 노트북에서 동일한 폰트크기 사용
+2.em
+:부모크기의 배수로 적용
+3.rem
+:브라우저의 기본크기의 배수로 적용(기본크기 : 16px)
+ex) 3rem=48px
+4.vw
+:브라우저의 가로너비에 영향(1vw=기본 화면 가로 넓이의 1/100)
+ex) 데스크탑 가로넓이 1000 -> 2vw=20px
+     font-size:3vw <-------30px이 된다 
+5.vh
+
+-------------------------------------------------
+<<반응형웹 (responsive web)
+:하나의 웹사이트에서 PC, 스마트폰, 태블릿 PC 등 접속하는 
+디스플레이의 종류에 따라 화면의 크기가 자동으로 변하도록 
+만든 웹페이지 접근 기법을 말한다.
+
+기기에 맞추어서 웹 화면을 보여주는 것
+
+1.media query: 반응형 웹을 만들기 위한 css
+형식: @media 미디어유형 and 조건 and 조건
+예) 미디어유형이 screen 이고 최소너비가 768, 최대넓이가 1500일 경우
+
+2.모바일		|   노트북		|    테블릿가로	|  데스크탑
+                      768px                  992px                 1024px
+
+
+
+css
+
+background:url(img/bd0.jpg) no-repeat fixed;
+background-size:cover;  
+
+[0414]
+<<bootstrap
+1.트위터에서 개발한 가장 인기있는 jquery 기반 오픈소스 프론트엔트 라이브러리
+2.반응형 웹으로 이루어짐
+
+*jquery: 자바스크립트 라이브러리
+
+3. 사용방법
+1) 파일들을 모두 다운받아서 사용
+2)CDN 으로 링크걸어서 사용
+
+4. bootstrap 무료 템플릿
+https://bootstrapthemes.co/items/free-bottstrap-templates/
+
+https://html5up.net/
+
+5. grid 레이아웃
+1) 화면을 12개의 컬럼으로 분활하여 사용(em,rem사용)
+2) 기기옵션
+
+구분
+---------------------------------------------------------------------------
+ <div class="row">
+        <div class="col bg-info">
+            Column1
+        </div>
+        <div class="col bg-warning">
+            Column2
+        </div>
+        <div class="col bg-success">
+            Column3
+    </div>
+</div>
+
+[0421]
+<< php root
+C:\Bitnami\wampstack-8.1.4-0\apache2\htdocs
+
+2.php
+1)대소문자 구분
+2)변수앞에 $붙음
+3)출력문: echo
+4)if,while, do-while, for, array 는 자바와 동일
+5)확장자:php
+6)<?php    .....?>
+
+
+*클라이언트에서 실행: 탐색기에서 실행 (주소창: c:\test1.php)
+*서버에서 실행: 서버에서 실행(주소창:http://localhost/1.php)
+
+*서버에서 실행: http://localhost/php_test/tes1.php
+
+크롬-localhost/php test/test1.php
+
+1. 1부터 10까지 짝수의 합 test3.php
+2.num=25 넣고 짝수 홀수 판별 test4.php
+3.score=87 일때 A,B,C,D,F출력 test5.php
+4.3번을 switch -case로 작성 test6.php
+5. num=-3일때 절대값 구하기 test7.php
+
+*php설정 파일: php.ini
+

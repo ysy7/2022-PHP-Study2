@@ -1,0 +1,40 @@
+<< 디렉토리 관련 함수
+
+1. opendir() : 디렉토리를 연다
+2. readdir(): 필요한 작업을 한다
+3. closedir(): 디렉토리를 닫는다
+4.scandir(): 디렉토리 안에 있는 파일과 목록을 배열로 반환
+5.is_dir(디렉토리): 디렉토리가 있는지 없는지 체크
+6. file_exists(디렉토리): 파일이나 디렉토리가 있는지 없는지 체크
+
+C:\Bitnami\wampstack-8.1.4-0\apache2
+
+<<파일 관련 함수 
+1. fopen(): 파일을 연다.
+    fopen(파일이름, r,,w,a);
+    1) r: read = 파일읽기 = 불러오기
+    2)w: write = 저장 = 파일쓰기 (overwrite:덮어쓰기)
+    3)a: append = 파일쓰기 = (update)추가하기 
+
+2. fgetc() : 한 글자 읽기
+    fgets() : 문자 읽기 
+    fread() : 한 줄 읽기 
+    file_get_contents(): 전체를 읽기
+    file_put_contents(): 전체를 쓰기 
+    fwrite(): 파일 쓰기 
+
+$handle = fopen($filename, "r");
+//data.txt를 읽기 모드로 열어서 handle이 가리키게 한다.
+
+$handle: 파일포인터 (file pointer)
+
+C:\Bitnami\wampstack-8.1.4-0\apache2\htdocs\php_test\data.txt
+------------------------root-------------------
+
+2. 파일에 쓰기 (write, 저장)
+    파일을 읽어오기 (read, 불러오기)
+3.파일을 닫는다.
+.(온점): 현재디렉토리
+..(점 두개): 상위디렉토리
+
+카운터

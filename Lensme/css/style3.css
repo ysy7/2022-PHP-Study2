@@ -1,0 +1,86 @@
+body{
+   /* background-color: yellow;  */
+   margin: 0;
+}
+.div01{
+    height:60px;
+    width:100%;
+    border-bottom:solid 1px;
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div01 .logo .img{
+    /* background-color: red; */
+    width: 175px;
+    height: 60px;
+    display:block; 
+    margin:auto;
+    align-items: center;
+
+}
+.div02{
+    background-color: none;
+    height:60px;
+    display: flex;
+    align-items: center;
+}
+.height{
+    height : 30px
+}
+
+.div02 .left{width: 20%;display: flex;justify-content: center;align-items: center;}
+.div02 .left .lang{font-size: 16px;}
+.div02 .center{width:60%;}
+.div02 .center ul.menu{display: flex;justify-content: space-around;position: relative;top:-12px;list-style: none}
+.div02 .right{width:20%; display: flex;justify-content: center;align-items: center;}
+.div02 .rtight .login{ font-size: 12px; }
+
+.div03{display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;}
+.div03 img.img01{width:100%;}
+
+.new_item{margin-top: 80px; margin-bottom: 30px;}
+.new_item h1{display: flex; align-items: center; justify-content: center; }
+.new_item p{display: flex; align-items: center; justify-content: center; margin-bottom: 50px; font-weight: bold;}
+.new_item img{width:30%; align-items: center; justify-content: space-between; margin-left: 20px; margin-right: 20px; left: 10; right: 10;}
+
+.best_item{margin-top: 80px; margin-bottom: 30px;}
+.best_item h1{display: flex; align-items: center; justify-content: center; }
+.best_item p{display: flex; align-items: center; justify-content: center; margin-bottom: 50px; font-weight: bold;}
+.best_item img{width:22%; align-items: center; justify-content: space-between; margin-left: 20px; margin-right: 20px; left: 10; right: 10;}
+
+.best_brand{margin-top: 80px; margin-bottom: 30px;}
+.best_brand h1{display: flex; align-items: center; justify-content: center; }
+.best_brand p{display: flex; align-items: center; justify-content: center; margin-bottom: 70px; font-weight: bold;}
+.best_brand img{width:22%; align-items: center; justify-content: space-around; margin-left: 20px; margin-right: 20px; left: 10; right: 10;}
+
+.ppl1{margin-top: 80px; margin-bottom: 20px; margin: 20px;}
+.ppl1 img{width:40%; align-items: center; justify-content: space-between; margin-left: 20px; margin-right: 20px; left: 10; right: 10;}
+.ppl2{margin-top: 80px; margin-bottom: 20px; margin: 20px;}
+.ppl2 img{width:40%; align-items: center; justify-content: space-between; margin-left: 20px; margin-right: 20px; left: 10; right: 10;}
+
+
+.basic h1{ display: flex; align-items: center; justify-content: center;  }
+.basic p{ display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0;}
+
+.event p{color: darkgray; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-top: 70px; }
+.event h1{display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 ; margin-bottom: 50px;}
+.event img{margin-bottom: 100px;}
+
+.stacy h1{display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 ; margin-bottom: 20px;}
+.stacy iframe{display: flex; align-items: center; justify-content: center;  margin: 10px 32%; margin-bottom: 150px;}
+
+footer{
+    width: 100%;
+    height: 320px;
+    margin-top: 50;
+    margin-bottom: 0;
+    background-color: #f4f4f4;
+    list-style: none;
+}
+.footer-list{
+    margin-top: 20px;
+    text-align: center;
+}

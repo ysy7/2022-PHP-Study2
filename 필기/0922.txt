@@ -1,0 +1,11 @@
+php에서 html을 사용하는 경우
+
+html에서 php를 사용하는 경우
+
+<input type ="text" size ="20"
+get방식
+https://map.naver.com/v5/?c=14130095.3734091,4504908.9732545,15,0,0,0,dh 
+뒤에 주절주절주절주절주절
+post 방식
+naver.com/
+뒤가 깔끔함

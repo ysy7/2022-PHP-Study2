@@ -1,0 +1,123 @@
+mysql 계정: test
+mysql password: 1111
+mysql 사용할 데이터베이스 : testdb
+-------------------------------------------------------
+1)테이블 생성
+create table 테이블이름(
+  필드 이름 필드타입,
+  .........
+  primary key(필드이름));
+  desc 테이블 이름; <--테이블구조 확인
+  drop table 테이블이름; 
+
+1. 접속
+2. book table 만들기
+   id: 번호
+   title: 책 제목
+   writer: 저자
+   publish: 출판사
+-----------------------------
+1, c, 철학, 강신주, 사계절
+2.시간, 유시민, 해냄
+3,태백산맥, 조정래, 해냄
+4,망원동브라더스, 김호연,시공사
+
+책 제목에 '스' 들어가는 자료 다 보기
+select * from book 
+where title like '%스%';
+
+사계절 -> 오계절로 수정하기
+update book set publish = '오계절' where id  =1;
+
+김호연 -> 김연호로 수정하기
+update book set writer = '김연호' where writer = '김호연';
+
+책 제목 '시간' -> 'time','유시민' -> usm 으로 수정하기
+update book set title = 'time', writer = 'usm'
+where id = 2;
+
+id 가 3번인 자료 삭제
+delete from book 
+where id =3;
+
+CRUD
+----------------------------------------------------------
+<<alter
+:테이블 구조변경하는 쿼리
+1) 테이블 이름 변경
+alter table 원래 테이블 이름 rename 변경할 테이블 이름;
+book --> tbl_book 으로 
+alter table book rename tbl_book; 참쉽죵?
+
+2) 컬럼 (필드) 추가
+alter table 테이블 이름 add 추가할 필드명 타입;
+book에 tel 필드 추가
+확인: desc
+author 밑에 추가 하고 싶다면 after author;
+
+3)컬럼명(필드) 수정
+alter table 테이블이름 change 기존필드명 새로운 필드명 타입;
+
+writer -> author로 변경
+
+4)컬럼(필드) 타입 수정
+alter table 테이블이름 modify 필드명 변경할 타입;
+publish -> int로 변경
+
+5)컬럼 (필드) 삭제
+alter table 테이블 이름 drop 필드이름;
+tel 삭제
+-----------------------------------------------------------
+<< apache 웹서버를 이용한 php와 mysql 연동
+1. 접속: mysqli_connect();
+2. 쿼리날리기: mysqli_query()
+3. 종료: mysqli_close();
+
+root폴더: C:\Bitnami\wampstack-8.1.4-0\apache2\htdocs
+	http://localhost (http://127.0.0.1)
+
+C:\Bitnami\wampstack-8.1.4-0\apache2\htdocs\db_test
+	http://localhost/db_test
+============================================
+bbs 
+id int(10) not null auto_increment,
+:게시판 글 번호를 자동으로 증가시킴
+title
+writer
+content text;
+regDate datetime default current_timestamp,
+:현재 시간을 자동으로 추가
+primary key(id));
+
+alter table bbs add email varchar(30) after writer;
+-----------------------------------------------------------
+<<php에서 mysql을 사용하기 위한 함수
+1. 접속: mysqli_connect(url, 아이디, 패스워드, 사용할 디비);
+2.쿼리: mysqli_query()
+3.종료: mysqli_close()
+
+<<클라이언트가 서버에서 정보를 요청하는 방식
+1. get:<a href...> 정보노출
+2. post: 안 보임 <form>
+
+mysqli_query()
+한줄 가져오기 mysqli_fetch_row()
+	      mysqli_fetch_array()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

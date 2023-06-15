@@ -1,0 +1,26 @@
+<< php root
+C:\Bitnami\wampstack-8.1.4-0\apache2\htdocs
+
+2.php
+1)대소문자 구분
+2)변수앞에 $붙음
+3)출력문: echo
+4)if,while, do-while, for, array 는 자바와 동일
+5)확장자:php
+6)<?php    .....?>
+
+
+*클라이언트에서 실행: 탐색기에서 실행 (주소창: c:\test1.php)
+*서버에서 실행: 서버에서 실행(주소창:http://localhost/1.php)
+
+*서버에서 실행: http://localhost/php_test/tes1.php
+
+크롬-localhost/php test/test1.php
+
+1. 1부터 10까지 짝수의 합 test3.php
+2.num=25 넣고 짝수 홀수 판별 test4.php
+3.score=87 일때 A,B,C,D,F출력 test5.php
+4.3번을 switch -case로 작성 test6.php
+5. num=-3일때 절대값 구하기 test7.php
+
+*php설정 파일: php.ini

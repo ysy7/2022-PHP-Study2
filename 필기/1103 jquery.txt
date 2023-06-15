@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang = "en">
+  <head.
+  <js, bootstrap> cdn 작성
+  <script>
+  ----jquery 작성-----
+  $(function(){
+    $("#myForm").submit(function(){
+	if($("#uid").val() =="") {
+	     alert('아이디 입력');
+           	$("#uid").focus();
+	     return false;
+}
+})  //myForm을 제출했을 때 function()을 실행해라
+
+}) //문서가 시작될 때 (member/join.html을 실행할 때 동작해라)
+
+
+  </script>
+</head>
